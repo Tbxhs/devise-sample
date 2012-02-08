@@ -15,3 +15,4 @@ node_modules
 .idea/geek.iml
 .idea/workspace.xml
 tmp/
+log/
