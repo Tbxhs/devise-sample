@@ -14,3 +14,4 @@ node_modules
 .idea/*
 .idea/geek.iml
 .idea/workspace.xml
+tmp/
