@@ -1,0 +1,14 @@
+default: &default
+  address:              smtp.163.com
+  port:                 25
+  domain:               163.com
+  user_name:            testrails
+  password:             163.com
+  authentication:       plain
+  enable_starttls_auto: true
+
+development:
+  <<: *default
+
+production:
+  <<: *default

@@ -13,8 +13,17 @@ Devise::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  ### ActionMailer Config
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
+
+  config.action_mailer.smtp_settings = YAML.load_file(Rails.root.join('config', 'mailers.yml'))[Rails.env].try(:to_options)
+
+  # 启用Observer
+  config.active_record.observers = :admin_observer
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
