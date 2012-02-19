@@ -9,6 +9,7 @@ task :create_admin => :environment do
           puts "Create admin :name => #{row[1].strip}"
         else
           puts "Fails to Create admin :name => #{row[1].strip}"
+        end
     else
       puts "Alread exits admin :name => #{row[1].strip}"
     end

@@ -41,3 +41,5 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem "cancan"
+
+gem 'acts-as-taggable-on', '~> 2.2.2'
