@@ -1,0 +1,3 @@
+ActiveAdmin
+	1.devise conflict: https://github.com/gregbell/active_admin/issues/724
+	2.Unknow Issue: undefined method `descendants' for Admin:Module (NoMethodError)
